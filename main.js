@@ -1,5 +1,6 @@
 const generateBtn = document.getElementById('generate-btn');
 const numbersContainer = document.getElementById('numbers-container');
+const themeSwitch = document.getElementById('checkbox');
 
 const getBallColor = (number) => {
     if (number <= 10) return '#fbc400'; // Yellow
@@ -8,6 +9,28 @@ const getBallColor = (number) => {
     if (number <= 40) return '#aaa';    // Gray
     return '#b0d840';                   // Green
 };
+
+// Theme switcher logic
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.body.classList.add(currentTheme);
+  
+    if (currentTheme === 'dark-mode') {
+        themeSwitch.checked = true;
+    }
+}
+
+themeSwitch.addEventListener('change', function(event) {
+    if(event.target.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light-mode');
+    }    
+});
+
 
 generateBtn.addEventListener('click', () => {
     numbersContainer.innerHTML = '';
