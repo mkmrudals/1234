@@ -1,21 +1,22 @@
 const generateBtn = document.getElementById('generate-btn');
-const numbersContainer = document.getElementById('numbers-container');
+const menuContainer = document.getElementById('numbers-container'); // Reusing the same container
 const themeSwitch = document.getElementById('checkbox');
 
-const getBallColor = (number) => {
-    if (number <= 10) return '#fbc400'; // Yellow
-    if (number <= 20) return '#69c8f2'; // Blue
-    if (number <= 30) return '#ff7272'; // Red
-    if (number <= 40) return '#aaa';    // Gray
-    return '#b0d840';                   // Green
-};
+const dinnerMenus = [
+    "치킨", "피자", "삼겹살", "족발", "보쌈", "짜장면", "짬뽕", "탕수육",
+    "초밥", "회", "파스타", "리조또", "스테이크", "햄버거", "샌드위치",
+    "김치찌개", "된장찌개", "부대찌개", "순두부찌개", "청국장",
+    "떡볶이", "순대", "튀김", "라면", "우동", "소바", "냉면",
+    "불고기", "갈비찜", "닭갈비", "찜닭", "아구찜", "해물찜",
+    "쌀국수", "분짜", "팟타이", "카레", "돈까스", "마라탕", "양꼬치"
+];
 
 // Theme switcher logic
 const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme) {
     document.body.classList.add(currentTheme);
-  
+
     if (currentTheme === 'dark-mode') {
         themeSwitch.checked = true;
     }
@@ -28,28 +29,17 @@ themeSwitch.addEventListener('change', function(event) {
     } else {
         document.body.classList.remove('dark-mode');
         localStorage.setItem('theme', 'light-mode');
-    }    
+    }
 });
 
-
 generateBtn.addEventListener('click', () => {
-    numbersContainer.innerHTML = '';
-    const numbers = new Set();
+    menuContainer.innerHTML = ''; // Clear previous result
 
-    while (numbers.size < 6) {
-        const randomNumber = Math.floor(Math.random() * 45) + 1;
-        numbers.add(randomNumber);
-    }
+    const randomIndex = Math.floor(Math.random() * dinnerMenus.length);
+    const selectedMenu = dinnerMenus[randomIndex];
 
-    const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
-
-    sortedNumbers.forEach((number, index) => {
-        setTimeout(() => {
-            const ball = document.createElement('div');
-            ball.classList.add('number-ball');
-            ball.style.backgroundColor = getBallColor(number);
-            ball.textContent = number;
-            numbersContainer.appendChild(ball);
-        }, index * 200); // Stagger the animation
-    });
+    const menuElement = document.createElement('div');
+    menuElement.classList.add('menu-item');
+    menuElement.textContent = selectedMenu;
+    menuContainer.appendChild(menuElement);
 });

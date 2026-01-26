@@ -145,31 +145,24 @@ h1 {
     gap: 15px;
 }
 
-.number-ball {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1.5rem;
+.menu-item {
+    font-size: 2.5rem;
     font-weight: bold;
-    box-shadow: inset 0 -5px 10px rgba(0,0,0,0.2);
-    text-shadow: 0 2px 3px rgba(0,0,0,0.3);
-    animation: pop-in 0.5s ease-out forwards;
+    color: var(--h1-color);
+    padding: 20px 40px;
+    border-radius: 15px;
+    background-color: var(--background-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: fade-in 0.5s ease-out forwards;
 }
 
-@keyframes pop-in {
+@keyframes fade-in {
     0% {
-        transform: scale(0);
         opacity: 0;
-    }
-    60% {
-        transform: scale(1.1);
-        opacity: 1;
+        transform: translateY(20px);
     }
     100% {
-        transform: scale(1);
+        opacity: 1;
+        transform: translateY(0);
     }
 }
