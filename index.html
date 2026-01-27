@@ -3,55 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>저녁 메뉴 추천</title>
+    <title>가위바위보 게임</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-        </label>
-    </div>
     <div class="container">
-        <h1>저녁 메뉴 추천</h1>
-        <button id="generate-btn">메뉴 추천</button>
-        <div id="numbers-container"></div>
-
-        <hr style="margin: 40px 0; border-color: #eee;">
-
-        <h2>제휴 문의</h2>
-        <form action="https://formspree.io/f/mgokogkz" method="POST" class="contact-form">
-            <!-- IMPORTANT: Replace YOUR_FORMSPREE_ENDPOINT with your actual Formspree endpoint -->
-            <label for="name">이름:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">이메일:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">문의 내용:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">문의 제출</button>
-        </form>
+        <h1>가위바위보 게임</h1>
+        <div class="choices">
+            <button id="rock" data-choice="바위">바위</button>
+            <button id="scissors" data-choice="가위">가위</button>
+            <button id="paper" data-choice="보">보</button>
+        </div>
+        <div id="countdown" class="message"></div>
+        <div class="result-display">
+            <div class="player-display">
+                <p>나:</p>
+                <div id="player-choice-img" class="choice-img"></div>
+            </div>
+            <div class="computer-display">
+                <p>AI:</p>
+                <div id="computer-choice-img" class="choice-img"></div>
+            </div>
+        </div>
+        <div id="result-message" class="message">결과</div>
+        <button id="reset-button">다시하기</button>
     </div>
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        var disqus_config = function () {
-        this.page.url = window.location.href;
-        this.page.identifier = window.location.pathname;
-        };
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://1234-fwwom5yxkn.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <script src="main.js"></script>
 </body>
 </html>
