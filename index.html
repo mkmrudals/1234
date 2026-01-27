@@ -3,33 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가위바위보 게임</title>
+    <title>궁극의 가위바위보: 전략과 역사</title>
     <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4316129795865181"
-     crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>가위바위보 게임</h1>
-        <div class="choices">
-            <button id="rock" data-choice="바위">바위</button>
-            <button id="scissors" data-choice="가위">가위</button>
-            <button id="paper" data-choice="보">보</button>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">RPS WORLD</a>
+            <nav class="main-nav">
+                <a href="index.html">홈</a>
+                <a href="game.html">게임하기</a>
+                <a href="#articles">블로그</a>
+            </nav>
         </div>
-        <div id="countdown" class="message"></div>
-        <div class="result-display">
-            <div class="player-display">
-                <p>나:</p>
-                <span id="player-choice" class="choice-emoji"></span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>AI와 즐기는 가위바위보, 그 이상의 재미</h1>
+                <p class="subtitle">단순한 운 게임을 넘어, 전략과 심리가 오가는 가위바위보의 모든 것을 알아보세요.</p>
+                <a href="game.html" class="cta-button">지금 게임 시작하기</a>
             </div>
-            <div class="computer-display">
-                <p>AI:</p>
-                <span id="computer-choice" class="choice-emoji"></span>
+        </section>
+
+        <section id="articles" class="articles-section">
+            <div class="container">
+                <h2>최신 글</h2>
+                <div class="article-grid">
+                    <!-- Article cards will be dynamically inserted here -->
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 RPS WORLD. 모든 권리 보유.</p>
+            <p><a href="#">About</a> | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
         </div>
-        <div id="result-message" class="message">결과</div>
-        <button id="reset-button">다시하기</button>
-    </div>
-    <script src="main.js"></script>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

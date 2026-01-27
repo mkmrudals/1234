@@ -1,0 +1,73 @@
+.game-container {
+    background-color: var(--card-background); /* Use site's background var */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    margin: 2rem auto; /* Add margin to center it and push from header */
+}
+
+.game-container h1 { /* Target specific h1 */
+    color: var(--primary-color); /* Use site's primary color */
+    margin-bottom: 30px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.choices button {
+    background-color: var(--primary-color); /* Use site's primary color */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100px;
+}
+
+.choices button:hover:not(:disabled) {
+    background-color: #45a049; /* Keep slightly darker green for hover, or derive from primary */
+    transform: translateY(-2px);
+}
+
+.choices button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.message {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--primary-color); /* Use site's primary color */
+    min-height: 1.5em;
+}
+
+.result-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.player-display,
+.computer-display {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.choice-emoji {
+    font-size: 60px;
+    line-height: 80px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
