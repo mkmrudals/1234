@@ -74,41 +74,10 @@ h1 {
     font-size: 1.2em;
 }
 
-.choice-img {
+.choice-emoji {
+    font-size: 60px;
+    line-height: 80px;
+    display: inline-block;
     width: 80px;
     height: 80px;
-    margin-top: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 2px solid #ddd;
-    border-radius: 5px;
 }
-
-#result-message {
-    font-size: 1.8em;
-    color: #FF5722;
-    margin-top: 20px;
-    min-height: 1.8em; /* Prevent layout shift */
-}
-
-#reset-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
-
-#reset-button:hover {
-    background-color: #0056b3;
-}
-
-/* Image backgrounds for choices */
-.choice-img[data-choice="바위"] { background-image: url('https://em-content.zobj.net/source/apple/354/rock_1f5ff.png'); }
-.choice-img[data-choice="가위"] { background-image: url('https://em-content.zobj.net/source/apple/354/scissors_2702-fe0f.png'); }
-.choice-img[data-choice="보"] { background-image: url('https://em-content.zobj.net/source/apple/354/raised-hand_270b.png'); }
