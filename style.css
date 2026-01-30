@@ -183,3 +183,37 @@ body {
         display: none; /* Simple responsive for now */
     }
 }
+
+/* FAQ Section */
+.faq-section {
+    padding: 4rem 0;
+    background-color: var(--background-color);
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--card-background);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: var(--primary-color);
+}
