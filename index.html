@@ -1,22 +1,76 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>궁극의 가위바위보: 전략과 역사</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <title>Digital Marketing Agency - Home | Boost Your Online Presence</title>
+    <meta name="description" content="Leading Digital Marketing Agency offering expert SEO, SEM, Social Media, and Content Marketing services to grow your business online.">
+    <meta name="keywords" content="digital marketing, SEO, SEM, social media marketing, content marketing, online presence, business growth">
+    <meta name="author" content="Digital Marketing Agency">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.youragency.com/">
+    <meta property="og:title" content="Digital Marketing Agency - Home | Boost Your Online Presence">
+    <meta property="og:description" content="Leading Digital Marketing Agency offering expert SEO, SEM, Social Media, and Content Marketing services to grow your business online.">
+    <meta property="og:image" content="https://www.youragency.com/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.youragency.com/">
+    <meta property="twitter:title" content="Digital Marketing Agency - Home | Boost Your Online Presence">
+    <meta property="twitter:description" content="Leading Digital Marketing Agency offering expert SEO, SEM, Social Media, and Content Marketing services to grow your business online.">
+    <meta property="twitter:image" content="https://www.youragency.com/images/twitter-image.jpg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Digital Marketing Agency",
+      "url": "https://www.youragency.com",
+      "logo": "https://www.youragency.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/youragency",
+        "https://twitter.com/youragency",
+        "https://www.linkedin.com/company/youragency"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Digital Marketing Agency",
+      "url": "https://www.youragency.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.youragency.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
-    <header class="site-header">
+    <header class="main-header">
         <div class="container">
-            <a href="index.html" class="logo">RPS WORLD</a>
+            <a href="index.html" class="logo">Digital Agency</a>
             <nav class="main-nav">
-                <a href="index.html">홈</a>
-                <a href="game.html">게임하기</a>
-                <a href="#articles">블로그</a>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -24,29 +78,45 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>AI와 즐기는 가위바위보, 그 이상의 재미</h1>
-                <p class="subtitle">단순한 운 게임을 넘어, 전략과 심리가 오가는 가위바위보의 모든 것을 알아보세요.</p>
-                <a href="game.html" class="cta-button">지금 게임 시작하기</a>
+                <h1>Unlock Your Business Potential with Expert Digital Marketing</h1>
+                <p>We provide cutting-edge SEO, SEM, Social Media, and Content Marketing strategies designed to drive growth and maximize your ROI.</p>
+                <a href="services.html" class="btn">View Our Services</a>
             </div>
         </section>
 
-        <section id="articles" class="articles-section">
+        <section class="content-section py-5">
             <div class="container">
-                <h2>최신 글</h2>
-                <div class="article-grid">
-                    <!-- Article cards will be dynamically inserted here -->
+                <h2>Why Choose Us?</h2>
+                <p class="text-center mb-3">At Digital Marketing Agency, we are dedicated to delivering measurable results through innovative and data-driven approaches.</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+                    <div style="flex: 1; min-width: 280px; padding: 20px; border: 1px solid #eee; border-radius: 8px; text-align: center; background-color: var(--light-color);">
+                        <h3>Expert Team</h3>
+                        <p>Our team comprises seasoned professionals with deep expertise in all facets of digital marketing.</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px; padding: 20px; border: 1px solid #eee; border-radius: 8px; text-align: center; background-color: var(--light-color);">
+                        <h3>Proven Results</h3>
+                        <p>We have a track record of helping businesses achieve significant online growth and increased conversions.</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px; padding: 20px; border: 1px solid #eee; border-radius: 8px; text-align: center; background-color: var(--light-color);">
+                        <h3>Custom Strategies</h3>
+                        <p>Every strategy is tailored to your unique business goals and target audience for maximum impact.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2026 RPS WORLD. 모든 권리 보유.</p>
-            <p><a href="#">About</a> | <a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
+            <p>&copy; 2026 Digital Marketing Agency. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/youragency" target="_blank" aria-label="Facebook"><img src="images/facebook-icon.svg" alt="Facebook" width="24" height="24"></a>
+                <a href="https://twitter.com/youragency" target="_blank" aria-label="Twitter"><img src="images/twitter-icon.svg" alt="Twitter" width="24" height="24"></a>
+                <a href="https://www.linkedin.com/company/youragency" target="_blank" aria-label="LinkedIn"><img src="images/linkedin-icon.svg" alt="LinkedIn" width="24" height="24"></a>
+            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
